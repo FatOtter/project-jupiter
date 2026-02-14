@@ -11,8 +11,18 @@
 ### Core Concept
 Humanity is transitioning from a Type I to a Type II civilization (Kardashev Scale).
 
-- **Structure:** A massive particle accelerator ring.
-- **Location:** Circumsolar orbit (around the Sun).
+- **Project Name Origin:** **Project Jupiter** - Named after its location near Jupiter's orbit, the largest planet in the solar system, embodying epic scale and ambition.
+
+- **Structure:** **Node-based accelerator array** (NOT a solid ring - would collapse under its own gravity).
+  - **Thousands of accelerator nodes** arranged in a vast circular formation
+  - **Particle path:** Straight-line vacuum segments between nodes
+  - **Deflection:** Ultra-powerful magnetic fields at each node provide small-angle course corrections
+  - **Why this design:** A solid ring structure would be gravitationally unstable and impossible to maintain; the node architecture allows for distributed construction, maintenance, and scalability
+
+- **Location:** Circumsolar orbit near **Jupiter's orbital radius** (~5.2 AU from the Sun).
+  - *Symbolism:* Jupiter, king of planets, provides fitting backdrop for humanity's greatest engineering feat
+  - *Practical:* Distance from Sun reduces solar radiation pressure and thermal stress; access to Jupiter's magnetosphere and moon resources
+
 - **Orientation:** **Perpendicular to the ecliptic plane** (90° to the planetary disc).
   - *Reasoning:* Avoids the dense dust, debris, and gravitational perturbations of the main planetary plane; provides a clear "shooting range" for high-energy experiments; symbolic "Halo" over the system.
 
