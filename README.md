@@ -9,6 +9,7 @@
 **Project Jupiter** 是一个硬核科幻共享宇宙，围绕"烛龙加速器"这一核心设定展开。采用**世界观-角色-故事**三层解耦架构，支持多条独立故事线。
 
 - **Created:** 2026-02-12
+- **Authors:** Rex Shen & Victoria (🐈‍⬛)
 - **Status:** Active Development
 - **Genre:** Hard Sci-Fi (Near Future to Far Future)
 - **Scale:** Kardashev Type I → Type II Civilization
