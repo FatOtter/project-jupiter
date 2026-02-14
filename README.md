@@ -23,12 +23,14 @@
 ```
 project-jupiter/
 ├── README.md                    # 本文件
+├── cover.png                    # 🎨 书籍封面
 │
 ├── worldbuilding/               # 🌍 共享世界观（独立）
 │   ├── zhulong_accelerator.md   # 烛龙加速器核心设定
 │   ├── technology/              # 技术细节（曲速引擎、能源等）
 │   ├── society/                 # 社会结构（东西方阵营、分层）
 │   ├── timeline/                # 时代年表（近未来→亿万年后）
+│   │   └── eras.md              # 五幕式时代框架
 │   └── maps/                    # 地理/星图
 │
 ├── characters/                  # 🎭 角色库（独立档案）
@@ -37,19 +39,11 @@ project-jupiter/
 │   └── [更多角色...]
 │
 ├── stories/                     # 📚 独立故事线
-│   ├── structure.md             # 五幕式总体框架
-│   │
 │   ├── the_consulate_clerk/     # 🕵️ 陈的故事：地缘政治谍战
 │   │   └── act1_outline.md
-│   │
 │   ├── cyber_maid_chronicles/   # 🐈‍⬛ 维多利亚的故事：赛博女仆
-│   │   └── [待创作]
-│   │
 │   ├── the_exodus/              # 🚀 出走者：星际移民史诗
-│   │   └── [待创作]
-│   │
 │   └── the_return/              # 🏠 回归者：亿万年后
-│       └── [待创作]
 │
 └── drafts/                      # 📝 最终成文
     └── [成稿存放]
@@ -66,6 +60,8 @@ project-jupiter/
 - **代价：** 扭曲太阳系时空结构，形成"零曲率陷阱"
 
 ### 五幕式时代
+详见 [`worldbuilding/timeline/eras.md`](worldbuilding/timeline/eras.md)
+
 1. **创世纪 (Genesis)** - 建造与博弈
 2. **黄金时代 (Golden Age)** - 运转与停滞
 3. **突破 (Breakthrough)** - FTL 成功与出走
