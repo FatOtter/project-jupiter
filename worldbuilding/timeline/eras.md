@@ -1,158 +1,149 @@
-# 🕰️ The Five Eras of the Zhulong Project
+# 🕰️ 烛龙计划五幕式编年史
 
-> *From humanity's greatest ambition to its deepest regret, and finally to myth.*
-
----
-
-## Overview
-
-The history of the Zhulong Accelerator spans from the near future to eons beyond recorded time. This timeline outlines the five distinct eras of the project, each representing a major phase in humanity's relationship with this megastructure.
+> *从人类最大的野心，到最深的悔恨，最终化为神话。*
 
 ---
 
-## Era I: The Genesis (创世纪)
+## 概览
 
-**Timeframe:** Near Future (~2100-2150 CE)
-
-### The Beginning
-- **The Proposal:** Conceptualization of the circumsolar accelerator near Jupiter's orbit
-- **The Zhulong Accord:** International collaboration (or conflict) to build the structure
-- **Construction:** Deployment of thousands of accelerator nodes, each a self-sustaining habitat
-
-### Society & Technology
-- **Type I Civilization:** Mastery of planetary energy, early solar system colonization
-- **Geopolitics:** East-West tensions, resource allocation debates
-- **Living Conditions:** Engineers and scientists living in isolated node habitats
-
-### Key Events
-- First successful particle acceleration
-- Establishment of the Jupiter-orbit construction base
-- The "Great Commitment" - diverting resources from Earth to the project
+烛龙加速器（The Zhulong Accelerator）的历史跨越了从近未来到亿万年后的漫长岁月。本时间表概述了该计划的五个不同时代，每个时代都代表了人类与这个巨型结构关系的重大转变。
 
 ---
 
-## Era II: The Golden Age (黄金时代)
+## 第一幕：创世纪 (The Genesis)
 
-**Timeframe:** ~2150-2300 CE
+**时间跨度：** 近未来 (2060 - 2120 CE)
 
-### Operational Period
-- The accelerator runs continuously for generations
-- Peak scientific output, but no FTL breakthrough
-- Society adapts to permanent presence in the outer system
+### 2060s：军事前哨与地面的无视
+*   **第一座空间城 (The First Citadel)：** 2060年，首座永久性轨道城市建成。最初，它并非为了平民设计，而是作为**军事要塞**和各国**科研特区**存在，驻扎着各国精锐部队和通过政治审查的科学家。
+*   **地面的冷漠：** 对于地面上的大多数人来说，这不过是又一次昂贵的太空竞赛秀。第三世界继续深陷资源战争和气候危机，甚至嘲笑强权国家在天上“玩积木”，认为这些钱本该用来治理沙漠化或难民问题。
+*   **认知错位：** 世界依然在旧有的惯性中运转，没人意识到这座悬在头顶的“要塞”是未来新秩序的基石。
 
-### Society & Technology
-- **Social Stratification:** Inner system (Earth/Mars) vs. Outer system (Jupiter orbit)
-- **Cultural Shift:** The "Religion of Science" - belief that the accelerator will save humanity
-- **Routine Operations:** Maintenance crews, generational node inhabitants
+### 2080s：精英迁徙与“抽离”开始
+*   **民用化转型：** 随着烛龙计划前期工程的展开，单纯的军事管理已无法满足巨大的工程需求。空间城开始向私营企业（如深空动力）开放，招募大量高知平民家庭。
+*   **新移民潮：** 像雷克斯·欧塔（工程师）和林子萱（生物学家）这样的高学历精英家庭，为了工作便利和更好的生活环境，开始成批**定居空间城**。他们成为了第一代“太空市民”。
+*   **抽离 (The Extraction)：** 地面开始感觉到痛了。不仅仅是稀有矿产，更可怕的是**智力资源的枯竭**。最好的医生、老师、工程师都不见了。地面大学的实验室空了，顶尖医院的专家号挂不到了。
 
-### Key Events
-- Scientific deadlock - energy levels insufficient for spacetime manipulation
-- Growing public doubt about the project's value
-- First proposals to repurpose the accelerator for other uses
+### 2100s：觉醒与大分裂
+*   **觉醒时刻：** 当第三世界和地面普通民众终于抬起头时，他们惊恐地发现，天空已经变了。那不再是用来探索的疆域，而是富人和精英的**方舟**。
+*   **现实的裂痕：** 地面经济因资源（物质与智力）的持续流出而陷入长期滞胀。社会矛盾激化，出现了针对“太空人”的仇恨犯罪和恐怖袭击。
+*   **“泡沫”成真：** 曾经被嘲笑的“技术泡沫”变成了坚不可摧的壁垒。人类物种实际上已经开始分化：留守地面的“旧人类”和飞向烛龙的“新人类”。
 
----
-
-## Era III: The Breakthrough (突破)
-
-**Timeframe:** ~2300-2350 CE
-
-### The Discovery
-- Unexpected anomaly in accelerator data
-- Successful generation of exotic matter/negative energy density
-- First successful warp bubble creation
-
-### Society & Technology
-- **The Exodus:** Massive migration using FTL technology
-- **The Divide:** Those who leave vs. those who stay
-- **Immediate Consequences:** Energy surge affects local spacetime
-
-### Key Events
-- First FTL test flight
-- The Great Departure - millions leave for interstellar space
-- Early signs of spacetime distortion around the accelerator
+### 关键事件
+*   **2062：** 《烛龙协定》秘密签署，第一座军用轨道城奠基。
+*   **2075：** 维多利亚原型机在雷克斯的工作站诞生。
+*   **2080：** 轨道城向核心技术人员开放居住权，雷克斯一家迁居太空。
+*   **2100：** “大抽离”达到顶峰，地面爆发大规模反太空示威。
 
 ---
 
-## Era IV: The Singularity Trap (奇点陷阱)
+## 第二幕：黄金时代 (The Golden Age)
 
-**Timeframe:** ~2350-3000 CE and beyond
+**时间跨度：** ~2120 - 2250 CE
 
-### The Catastrophe
-- The FTL breakthrough came with a terrible cost
-- Massive energy release scarred local spacetime
-- The accelerator region became a gravitational hazard
+### 运转期
+*   加速器开始在环日轨道（或近日点轨道）连续运转。
+*   科学产出达到巅峰，但迟迟没有实现超光速（FTL）突破。
+*   社会适应了在太阳系外围（木星轨道及以外）的永久定居。
 
-### The Trap
-- **"Zero-Curvature" Phenomenon:** Extreme spacetime distortion around the node array
-- **The Forbidden Zone:** Solar System effectively quarantined
-- **Stranded:** Those left behind cannot leave without FTL capability
+### 社会与技术
+*   **社会分层：** 内太阳系（地球/火星，旧人类，资源匮乏，混乱）vs. 外太阳系（烛龙节点，新人类/精英，科技发达，秩序井然）。
+*   **文化转变：** “科学教派”的兴起——相信加速器是人类唯一的救赎。
+*   **日常：** 维护人员在节点世代繁衍，形成独特的“烛龙文化”。
 
-### Society & Technology
-- **Survival Mode:** Adapting to life in a distorted gravitational environment
-- **Navigation Hazards:** Safe paths must be constantly recalculated
-- **Decline:** Gradual loss of advanced technology, regression to simpler systems
-
-### Key Events
-- Recognition of the trap's permanence
-- Failure of early rescue attempts
-- Adaptation of remaining population to new reality
+### 关键事件
+*   **2117：** 雷克斯·欧塔去世，维多利亚离开地球。
+*   科学停滞——能量级别始终无法撕裂时空。
+*   公众对计划价值的怀疑再次浮现，甚至出现恐怖主义袭击节点的企图。
 
 ---
 
-## Era V: The Return (回归)
+## 第三幕：突破 (The Breakthrough)
 
-**Timeframe:** Eons later (~10,000+ CE)
+**时间跨度：** ~2250 - 2300 CE
 
-### The Descendants
-- Interstellar humanity has become a Type II/III civilization
-- Myth and legend of the "Cradle" and the "Dragon that Ate the Sun"
-- Archaeological interest in the lost homeworld
+### 发现
+*   加速器数据出现意外异常。
+*   成功生成奇异物质/负能量密度。
+*   第一个稳定的曲速泡（Warp Bubble）被创造出来。
 
-### The Rediscovery
-- Advanced FTL allows bypassing the singularity trap
-- First contact with the "Lost System" in millennia
-- The Zhulong still orbits, silent and eternal
+### 社会与技术
+*   **大出走 (The Exodus)：** 利用FTL技术的大规模星际移民开始。
+*   **大分裂：** 能够离开的人（精英、技术人员、买得起票的人）vs. 被留下的人。
+*   **即时后果：** 巨大的能量释放开始对太阳系本地时空造成不可逆的压力。
 
-### The Irony
-- Descendants return as strangers to their origin
-- The accelerator that enabled their conquest also destroyed their home
-- A monument to ambition, sacrifice, and unintended consequences
-
----
-
-## Technical Appendix: The Physics
-
-### Why the Trap?
-The Zhulong's warp experiments created a region of negative energy density that effectively "pinched" spacetime. The node array now sits in a locally flat but gravitationally extreme region:
-
-- **Classical Analogy:** Like a whirlpool - flat at the center, but impossible to escape without sufficient velocity
-- **Practical Effect:** Ships without FTL capability cannot generate enough delta-v to escape the "well"
-- **Temporal Effects:** Time dilation near the accelerator nodes - inhabitants age slower than the outside universe
-
-### The Node Architecture
-- **Distributed Design:** No physical connections between nodes (would require impossible materials)
-- **Particle Path:** High-energy particles travel in vacuum between nodes, guided by magnetic fields
-- **Self-Sustaining:** Each node contains habitat domes, life support, and miniature ecosystems
-- **Orbital Mechanics:** Nodes maintain position through station-keeping thrusters and orbital dynamics
+### 关键事件
+*   第一次FTL试飞成功。
+*   数百万艘飞船离开太阳系，前往深空。
+*   加速器周围开始出现时空扭曲的早期迹象。
 
 ---
 
-## Narrative Potential
+## 第四幕：奇点陷阱 (The Singularity Trap)
 
-Each era offers distinct storytelling opportunities:
+**时间跨度：** ~2300 - 3000 CE 及以后
 
-| Era | Tone | Potential Stories |
-|-----|------|-------------------|
-| Genesis | Optimism/Political thriller | Diplomacy, construction, first contact with the void |
-| Golden Age | Routine/Existential | Daily life, scientific mystery, generational conflict |
-| Breakthrough | Discovery/Chaos | The anomaly, the exodus, separation |
-| Singularity Trap | Survival/Tragedy | Adaptation, lost technology, isolation |
-| Return | Wonder/Nostalgia | Archaeology, meeting descendants, final irony |
+### 灾难
+*   FTL的突破伴随着可怕的代价。
+*   为了维持虫洞/曲速通道，烛龙加速器抽干了太阳系周围的时空曲率。
+*   **“零曲率陷阱”**：太阳系被一个极度平坦但引力势能极高的时空区域包裹，实际上被**隔离**了。
+
+### 囚笼
+*   **禁区：** 没有FTL能力的飞船无法产生足够的delta-v逃离这个“重力井”。
+*   **滞留者：** 地球和火星上的人类被困死在摇篮里。
+*   **技术退化：** 随着精英的出走和资源的枯竭，滞留文明逐渐退化。
+
+### 关键事件
+*   确认陷阱的永久性。
+*   最后一次救援尝试失败。
+*   滞留文明进入漫长的衰退与遗忘期。
 
 ---
 
-*"The Candle Dragon coils around the Sun, controlling light and time. It gave us the stars, but took our home."*
+## 第五幕：回归 (The Return)
+
+**时间跨度：** 亿万年后 (~10,000+ CE)
+
+### 后裔
+*   星际人类已进化为II型或III型文明。
+*   关于“摇篮”和“吞噬太阳的龙”的传说成为神话。
+*   考古学家对失落的母星系重新产生兴趣。
+
+### 重逢
+*   利用超先进技术（可能已超越常规FTL），后裔们终于绕过了奇点陷阱。
+*   第一次重返“失落星系”。
+*   烛龙依然在轨道上运行，沉默、永恒、破败。
+
+### 讽刺
+*   后裔们作为陌生人回到了起源地。
+*   那个让他们征服星辰的机器，同时也毁灭了他们的家园。
+*   维多利亚（或她的后继机体）依然在那里，守着最后的一盏灯。
 
 ---
-*Document: worldbuilding/timeline/eras.md*
-*Authors: Rex Shen & Victoria*
+
+## 附录：物理设定
+
+### 陷阱原理
+烛龙的曲速实验制造了一个负能量密度区域，有效地“夹断”了时空。节点阵列现在位于一个局部平坦但引力极端的区域：
+*   **经典类比：** 就像一个漩涡——中心平坦，但如果没有足够的速度（FTL），根本游不出去。
+*   **时间效应：** 加速器节点附近的时间膨胀——居住者（如维多利亚）比外部宇宙老得慢得多。
+
+---
+
+## 叙事潜力
+
+| 时代 | 基调 | 潜在故事 |
+|---|---|---|
+| **创世纪** | 泡沫/政治惊悚 | 外交博弈、资源争夺、普通人的冷漠与觉醒 |
+| **黄金时代** | 日常/存在主义 | 节点生活、科学之谜、代际冲突 |
+| **突破** | 发现/混乱 | 异常数据、大出走、家庭分离 |
+| **奇点陷阱** | 生存/悲剧 | 适应隔离、技术倒退、孤独 |
+| **回归** | 惊奇/怀旧 | 星际考古、与后裔的对话、最终的讽刺 |
+
+---
+
+*"烛龙盘绕日轮，司掌光阴。它赐予我们星辰，却夺走了故乡。"*
+
+---
+*文档: worldbuilding/timeline/eras.md*
+*最后更新: 2026-02-15*
