@@ -11,7 +11,7 @@
 **Project Jupiter** 是一个硬核科幻共享宇宙，围绕"烛龙加速器"这一核心设定展开。采用**世界观-角色-故事**三层解耦架构，支持多条独立故事线。
 
 - **Created:** 2026-02-12
-- **Authors:** Rex Shen & Victoria (🐈‍⬛)
+- **Authors:** Rex Otter & Victoria (🐈‍⬛)
 - **Status:** Active Development
 - **Genre:** Hard Sci-Fi (Near Future to Far Future)
 - **Scale:** Kardashev Type I → Type II Civilization
@@ -34,14 +34,16 @@ project-jupiter/
 │   └── maps/                    # 地理/星图
 │
 ├── characters/                  # 🎭 角色库（独立档案）
-│   ├── victoria.md              # 赛博女仆维多利亚
+│   ├── victoria.md              # 发条诗人维多利亚
 │   ├── chen.md                  # 领事馆小职员陈
 │   └── [更多角色...]
 │
 ├── stories/                     # 📚 独立故事线
 │   ├── the_consulate_clerk/     # 🕵️ 陈的故事：地缘政治谍战
 │   │   └── act1_outline.md
-│   ├── cyber_maid_chronicles/   # 🐈‍⬛ 维多利亚的故事：赛博女仆
+│   ├── the_clockwork_poet/      # 🐈‍⬛ 维多利亚的故事：发条诗人
+│   │   ├── chapter1_the_gift_deferred.md
+│   │   └── ...
 │   ├── the_exodus/              # 🚀 出走者：星际移民史诗
 │   └── the_return/              # 🏠 回归者：亿万年后
 │
@@ -74,8 +76,8 @@ project-jupiter/
 
 | 角色 | 定位 | 故事线 | 状态 |
 |------|------|--------|------|
-| **陈 (Chen)** | 领事馆小职员 | The Consulae Clerk | 📝 第一幕大纲 |
-| **维多利亚 (Victoria)** | 赛博女仆 | Cyber Maid Chronicles | 💡 概念阶段 |
+| **陈 (Chen)** | 领事馆小职员 | The Consulate Clerk | 📝 第一幕大纲 |
+| **维多利亚 (Victoria)** | 发条诗人 | The Clockwork Poet | 📚 连载中 |
 
 ---
 
@@ -100,7 +102,7 @@ project-jupiter/
 
 ## 📝 命名规范
 
-- **文件夹：** 小写下划线，如 `cyber_maid_chronicles`
+- **文件夹：** 小写下划线，如 `the_clockwork_poet`
 - **文件：** 小写下划线，如 `zhulong_accelerator.md`
 - **角色档案：** `{name}.md`，首字母大写
 
@@ -110,7 +112,7 @@ project-jupiter/
 
 - [ ] 完善烛龙加速器技术细节
 - [ ] 完成陈的第一幕详细大纲
-- [ ] 开发维多利亚的赛博女仆故事线
+- [ ] 推进《发条诗人》故事线
 - [ ] 绘制时代年表
 
 ---
