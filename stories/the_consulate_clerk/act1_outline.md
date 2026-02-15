@@ -1,57 +1,55 @@
-# 🎬 Act 1: The Genesis (The Near Future)
+# 第一幕：创世纪（近未来）
 
-## 🎭 Protagonist: The "Accidental Witness"
+## 主角：“偶然的见证者”
 
-### Character Profile: Chen (or similar name)
-- **Background:**
-  - A STEM student from the "New Communist Bloc" (China/East).
-  - Studied at a top university in the "Advanced Capitalist Bloc" (US/West).
-  - **Goal:** Wanted the "American Dream" 2.0—a high-paying job at a fusion tech giant or a synthetic bio-corp.
-  - **Reality:** Failed to secure a visa/job due to rising geopolitical tensions and protectionist policies ("National Security Risk").
-  - **Current Job:** A low-level clerk/translator at the **East's Consulate** in a major Western city (e.g., New York or Geneva).
+### 人物档案：陈 (Chen)
+*   **背景：** 来自“新共产主义集团”（中国/东方）的理工科学生，在“发达资本主义集团”（美国/西方）的顶尖大学留学。
+*   **目标：** 想要实现2.0版的“美国梦”——在聚变科技巨头或合成生物公司找一份高薪工作。
+*   **现实：** 由于地缘政治紧张和保护主义政策（“国家安全风险”），未能获得签证或工作。
+*   **当前工作：** 在西方主要城市（如纽约或日内瓦）的**东方领事馆**担任低级职员/翻译。
 
-### Narrative Function
-- **The "Fly on the Wall":**
-  - As a low-level staffer, he is ignored by the "Big Players" but handles the paperwork, coffee, and logistics.
-  - He witnesses the **private** side of the "Zhulong Accord" negotiations: the frustration, the insults, the secret meetings, the desperation.
-- **The Bridge:**
-  - Culturally, he understands both sides. He sees the West's technological arrogance and the East's rigid hierarchy.
-  - He is disillusioned with both: The West rejected him, and the East sees him as a tool.
+### 叙事功能
+*   **“墙上的苍蝇”：** 作为低级职员，他被“大人物”们忽视，却经手着文件、咖啡和后勤。他见证了“烛龙协议”谈判的**私密**一面：挫败、羞辱、秘密会议和绝望。
+*   **桥梁：** 在文化上，他理解双方。他看到了西方的技术傲慢和东方的僵化等级。他对两者都感到幻灭：西方拒绝了他，而东方视他为工具。
 
-### Act 1 Detail: The "Mouse in the Machine" (Chen's Arc)
-1.  **The Spy Discovery:**
-    -   While processing seemingly routine visa applications or trade documents for "Western Tech Delegates," Chen notices anomalies.
-        -   Odd technical jargon used out of context? (Maybe "FTL" in a bio-synth import license?)
-        -   Names that don't match public records?
-    -   **Action:** He reports this to his superiors at the Consulate (East Bloc Intelligence).
-    -   **Result:** A major counter-intelligence operation. A network of Western industrial spies is busted. Chen gets a commendation (maybe a small bonus or a pat on the back, but still no green card).
+### 第一幕细节：“机器里的老鼠”（陈的弧光）
 
-2.  **The Western "Pivot":**
-    -   News breaks: A flamboyant Western tech mogul (Elon Musk-esque, but more extreme) announces a **"Private Circumsolar Accelerator Initiative"**.
-    -   **Promise:** "We don't need the Reds! Private enterprise will unlock the stars!"
-    -   **Reality (Chen sees the paperwork):** It's a grift. The mogul secures massive NASA/government grants.
-    -   **Outcome:** 10 years later, no accelerator. The money went into:
-        -   Ultra-luxury orbital hotels for the 0.01%.
-        -   Zero-G golf courses.
-        -   Synthetic organ farms for longevity.
-    -   **Chen's Cynicism:** He realizes the West *cannot* build the real thing. Their system is too broken by greed. The "Zhulong" is their only hope, and they know it.
+**1. 发现间谍**
 
-3.  **The "Oops" Moment (The Real Turning Point):**
-    -   **The Setup:**
-        -   Chen skips work at the Chicago Consulate (or NY) with a **Hippie Dude** he met (a cynical Western dropout).
-        -   They go to a dive bar, trying to pick up a **Pretty Journalist**.
-    -   **The Mistake:**
-        -   The journalist is stressed, investigating the Western Tech Mogul's scam.
-        -   In a rush (drunk?), she sends a WhatsApp message with **Confidential Blueprints/Financial Logs** to the *wrong group chat* (or accidentally AirDrops it to Chen's phone?).
-    -   **The Discovery:**
-        -   Chen opens the file. It's not just a expose on the scam. It contains **technical specs** that prove the West *has* the theoretical breakthrough but *cannot build the hardware*.
-        -   The file shows: "Project Zhulong Feasibility: 0% without East Bloc Industrial Base."
-    -   **The Action:**
-        -   Chen realizes the gravity. He hands it to his Consulate superiors.
-    -   **The Outcome:**
-        -   The East Bloc intelligence apparatus analyzes it.
-        -   **Result:** They realize the West is bluffing about "going it alone."
-        -   **Strategic Shift:** The East Bloc now has leverage. They force the West to the negotiating table on *their* terms. The "Zhulong Accord" is born not from trust, but from a drunken mistake in a Chicago dive bar.
+在处理看似常规的“西方科技代表团”签证申请或贸易文件时，陈发现了异常。
+
+*   生化进口许可证里出现了奇怪的、不合语境的技术术语（比如“超光速”）？
+*   名字与公共记录不符？
+
+**行动：** 他向领事馆的上级（东方集团情报部门）报告了此事。
+**结果：** 一次重大的反间谍行动。一个西方工业间谍网被破获。陈获得了嘉奖（也许是一笔小奖金或口头表扬，但依然没有绿卡）。
+
+**2. 西方的“转向”**
+
+新闻爆出：一位浮夸的西方科技大亨（类似埃隆·马斯克，但更极端）宣布了一项**“私人环日加速器计划”**。
+
+**承诺：** “我们不需要红色阵营！私营企业将解锁星辰！”
+**现实（陈看到的内部文件）：** 这是一个骗局。大亨骗取了巨额NASA/政府拨款。
+**结局：** 10年后，没有加速器。钱流向了：
+*   0.01%富人的超豪华轨道酒店。
+*   零重力高尔夫球场。
+*   追求长寿的合成器官农场。
+
+**陈的愤世嫉俗：** 他意识到西方*无法*建造真正的加速器。他们的系统被贪婪破坏得太严重了。“烛龙”是他们唯一的希望，而他们心知肚明。
+
+**3. “意外”时刻（真正的转折点）**
+
+**铺垫：** 陈和一个他在芝加哥（或纽约）领事馆认识的**嬉皮士老兄**（一个愤世嫉俗的西方辍学者）翘班了。他们去了一家低档酒吧，试图搭讪一位**漂亮女记者**。
+
+**错误：** 记者压力很大，正在调查西方科技大亨的骗局。在匆忙（或醉酒？）中，她把**机密蓝图/财务日志**发到了*错误的群聊*（或者意外AirDrop到了陈的手机上？）。
+
+**发现：** 陈打开了文件。这不仅仅是关于骗局的曝光。它包含了**技术规格**，证明西方*拥有*理论突破，但*无法制造硬件*。文件显示：“没有东方集团的工业基础，烛龙计划的可行性为0%。”
+
+**行动：** 陈意识到了事态的严重性。他把它交给了领事馆的上级。
+
+**结果：** 东方集团的情报机构对其进行了分析。
+**结局：** 他们意识到西方关于“单干”是在虚张声势。
+**战略转变：** 东方集团现在拥有了筹码。他们迫使西方回到谈判桌上，按照*他们的*条件。“烛龙协议”的诞生并非源于信任，而是源于芝加哥一家低档酒吧里的醉酒失误。
 
 ---
-*Drafted: 2026-02-12*
+*草稿日期：2026-02-12*
