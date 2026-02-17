@@ -21,7 +21,11 @@ Humanity is transitioning from a Type I to a Type II civilization (Kardashev Sca
 
 - **Location:** Circumsolar orbit near **Jupiter's orbital radius** (~5.2 AU from the Sun).
   - *Symbolism:* Jupiter, king of planets, provides fitting backdrop for humanity's greatest engineering feat
-  - *Practical:* Distance from Sun reduces solar radiation pressure and thermal stress; access to Jupiter's magnetosphere and moon resources
+  - *Practical:*
+    - **Resource Extraction:** Jupiter is a limitless fuel source (Deuterium/Helium-3) for the accelerator's fusion reactors. "Fuel Scoops" on specialized nodes dip into the upper atmosphere to refuel in-situ.
+    - **Gravitational Anchor:** Jupiter's massive gravity well stabilizes the megastructure's orbit and provides gravity assists for experimental craft.
+    - **Satellite Network:** The Galilean moons (Ganymede, Callisto) serve as natural command centers, living quarters, and industrial bases (Ice mining on Europa for coolant).
+    - Distance from Sun reduces solar radiation pressure and thermal stress.
 
 - **Orientation:** **Perpendicular to the ecliptic plane** (90° to the planetary disc).
   - *Reasoning:* Avoids the dense dust, debris, and gravitational perturbations of the main planetary plane; provides a clear "shooting range" for high-energy experiments; symbolic "Halo" over the system.
