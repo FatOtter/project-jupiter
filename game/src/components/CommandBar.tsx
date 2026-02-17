@@ -1,6 +1,6 @@
 interface CommandBarProps {
-  activeTab: 'SCAN' | 'LOGS' | 'MANIFEST';
-  onTabChange: (tab: 'SCAN' | 'LOGS' | 'MANIFEST') => void;
+  activeTab: 'SCAN' | 'LOGS' | 'MANIFEST' | 'DASHBOARD';
+  onTabChange: (tab: 'SCAN' | 'LOGS' | 'MANIFEST' | 'DASHBOARD') => void;
 }
 
 export function CommandBar({ activeTab, onTabChange }: CommandBarProps) {
