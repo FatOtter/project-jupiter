@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useKeyboardNav } from '../hooks/useKeyboardNav'
 
 interface Hotspot {
@@ -20,13 +20,14 @@ export function SceneViewer({ imageSrc, title, description, hotspots }: ScenePro
   const [cursor, setCursor] = useState({ x: 50, y: 50 })
   const [lockedTarget, setLockedTarget] = useState<Hotspot | null>(null)
   
-  // Movement speed
-  const SPEED = 2
+  const containerRef = useRef<HTMLDivElement>(null)
 
+  // 1. Keyboard Movement
   useKeyboardNav((action) => {
     setCursor(prev => {
       let newX = prev.x
       let newY = prev.y
+      const SPEED = 2
 
       switch(action) {
         case 'UP': newY = Math.max(0, prev.y - SPEED); break;
@@ -41,18 +42,40 @@ export function SceneViewer({ imageSrc, title, description, hotspots }: ScenePro
     })
   }, [lockedTarget])
 
+  // 2. Mouse Movement
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!containerRef.current) return
+    const rect = containerRef.current.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    const y = ((e.clientY - rect.top) / rect.height) * 100
+    setCursor({ x, y })
+  }
+
+  // 3. Mouse Click
+  const handleClick = () => {
+    if (lockedTarget) lockedTarget.onClick()
+  }
+
   // Check for collision
   useEffect(() => {
     const HIT_RADIUS = 5 // 5% radius
     const hit = hotspots.find(h => {
-      const dist = Math.hypot(h.x - cursor.x, h.y - cursor.y)
-      return dist < HIT_RADIUS
+      // Calculate distance based on aspect ratio approximation or just raw %
+      // Simple raw % distance is usually fine for this aesthetic
+      const dx = h.x - cursor.x
+      const dy = h.y - cursor.y
+      return Math.sqrt(dx*dx + dy*dy) < HIT_RADIUS
     })
     setLockedTarget(hit || null)
   }, [cursor, hotspots])
 
   return (
-    <div className="relative w-full h-full border-2 border-terminal-dim bg-black overflow-hidden cursor-none">
+    <div 
+      ref={containerRef}
+      className="relative w-full h-full border-2 border-terminal-dim bg-black overflow-hidden cursor-none"
+      onMouseMove={handleMouseMove}
+      onClick={handleClick}
+    >
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-60"
