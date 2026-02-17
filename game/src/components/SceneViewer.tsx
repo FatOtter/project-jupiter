@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useKeyboardNav } from '../hooks/useKeyboardNav'
 
 interface Hotspot {
   id: string
@@ -16,13 +17,45 @@ interface SceneProps {
 }
 
 export function SceneViewer({ imageSrc, title, description, hotspots }: SceneProps) {
-  const [hoveredSpot, setHoveredSpot] = useState<string | null>(null)
+  const [cursor, setCursor] = useState({ x: 50, y: 50 })
+  const [lockedTarget, setLockedTarget] = useState<Hotspot | null>(null)
+  
+  // Movement speed
+  const SPEED = 2
+
+  useKeyboardNav((action) => {
+    setCursor(prev => {
+      let newX = prev.x
+      let newY = prev.y
+
+      switch(action) {
+        case 'UP': newY = Math.max(0, prev.y - SPEED); break;
+        case 'DOWN': newY = Math.min(100, prev.y + SPEED); break;
+        case 'LEFT': newX = Math.max(0, prev.x - SPEED); break;
+        case 'RIGHT': newX = Math.min(100, prev.x + SPEED); break;
+        case 'ENTER': 
+          if (lockedTarget) lockedTarget.onClick();
+          break;
+      }
+      return { x: newX, y: newY }
+    })
+  }, [lockedTarget])
+
+  // Check for collision
+  useEffect(() => {
+    const HIT_RADIUS = 5 // 5% radius
+    const hit = hotspots.find(h => {
+      const dist = Math.hypot(h.x - cursor.x, h.y - cursor.y)
+      return dist < HIT_RADIUS
+    })
+    setLockedTarget(hit || null)
+  }, [cursor, hotspots])
 
   return (
-    <div className="relative w-full h-full border-2 border-terminal-dim bg-black overflow-hidden group">
-      {/* Background Image with CRT Filter overlay */}
+    <div className="relative w-full h-full border-2 border-terminal-dim bg-black overflow-hidden cursor-none">
+      {/* Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+        className="absolute inset-0 bg-cover bg-center opacity-60"
         style={{ backgroundImage: `url(${imageSrc})` }}
       >
         <div className="absolute inset-0 bg-terminal-bg/30 mix-blend-multiply"></div>
@@ -34,27 +67,42 @@ export function SceneViewer({ imageSrc, title, description, hotspots }: ScenePro
         <p className="text-sm text-terminal-dim font-mono">{description}</p>
       </div>
 
-      {/* Hotspots */}
+      {/* Cursor Crosshair */}
+      <div 
+        className={`absolute z-50 pointer-events-none transition-all duration-75 ease-linear
+          ${lockedTarget ? 'scale-125' : 'scale-100'}
+        `}
+        style={{ left: `${cursor.x}%`, top: `${cursor.y}%` }}
+      >
+        {/* Crosshair Lines */}
+        <div className="absolute -left-4 top-0 w-8 h-[1px] bg-terminal-text/50"></div>
+        <div className="absolute left-0 -top-4 w-[1px] h-8 bg-terminal-text/50"></div>
+        
+        {/* Center Box */}
+        <div className={`absolute -left-2 -top-2 w-4 h-4 border 
+          ${lockedTarget ? 'border-terminal-text bg-terminal-text/20 animate-pulse' : 'border-terminal-dim'}
+        `}></div>
+
+        {/* Coordinates */}
+        <div className="absolute left-4 top-4 text-xs font-mono text-terminal-dim">
+          X:{cursor.x.toFixed(1)} Y:{cursor.y.toFixed(1)}
+        </div>
+
+        {/* Target Lock Label */}
+        {lockedTarget && (
+          <div className="absolute left-6 -top-2 bg-terminal-text text-black px-2 py-1 text-xs font-bold whitespace-nowrap">
+            [ ENTER TO SCAN: {lockedTarget.label} ]
+          </div>
+        )}
+      </div>
+
+      {/* Hidden Hotspot Markers (Optional: keep them faint so player knows where to look?) */}
       {hotspots.map((spot) => (
-        <button
+        <div
           key={spot.id}
-          className="absolute z-30 w-8 h-8 -ml-4 -mt-4 flex items-center justify-center group/spot focus:outline-none"
+          className="absolute z-10 w-2 h-2 bg-terminal-dim/30 rounded-full"
           style={{ left: `${spot.x}%`, top: `${spot.y}%` }}
-          onClick={spot.onClick}
-          onMouseEnter={() => setHoveredSpot(spot.id)}
-          onMouseLeave={() => setHoveredSpot(null)}
-        >
-          {/* Target Reticle Animation */}
-          <div className="absolute inset-0 border border-terminal-alert rounded-full animate-ping opacity-75"></div>
-          <div className="relative w-4 h-4 bg-terminal-alert/20 border border-terminal-alert rounded-full hover:bg-terminal-alert/50 transition-colors"></div>
-          
-          {/* Tooltip */}
-          {hoveredSpot === spot.id && (
-            <div className="absolute left-6 top-0 bg-black border border-terminal-text px-2 py-1 text-xs text-terminal-text whitespace-nowrap z-40">
-              {`[ ANALYZE: ${spot.label} ]`}
-            </div>
-          )}
-        </button>
+        ></div>
       ))}
 
       {/* Grid Overlay */}
