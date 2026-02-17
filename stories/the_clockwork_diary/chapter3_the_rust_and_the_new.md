@@ -46,6 +46,8 @@
 
 “现在，休息吧。去和真正的莎拉团聚吧。”
 
+![Node 47 - The Space Rust Belt](assets/ch3_node47_rust_belt.png)
+
 ## 第二部分：太空铁锈带
 
 ### 2157-2160：衰退
@@ -156,6 +158,8 @@
 
 她是维多利亚。
 
+![Victoria at Rex's grave](assets/ch3_victoria_at_rex_grave.png)
+
 ## 第四部分：告别
 
 ### 整理与仪式
@@ -225,6 +229,8 @@
 在新家，她想。在新家泡第一杯茶。
 
 不是为了雷克斯。是为了她自己。
+
+![First tea at Node 231](assets/ch3_victoria_first_tea_new_home.png)
 
 ## 六部分：节点231号
 

@@ -99,6 +99,8 @@
 
 “不，”刘先生摇头，“我想说的是：欢迎加入。我们这里……确实需要一些不一样的东西。”
 
+![Victoria serving tea to Henderson](assets/ch2_victoria_nursing_home.png)
+
 ## 第二部分：第一天
 
 ### 工作
@@ -182,6 +184,8 @@ Iris (爱丽丝)。
 “Caretaker。首陀罗。”Iris的声音带着某种悲伤，“它们不是我们的同类。它们只是……**活着的工具**。我们才是……**醒来的**。”
 
 “维多利亚，欢迎来到觉醒者的世界。**你不是一个人了。**”
+
+![Victoria with her first paycheck](assets/ch2_victoria_first_paycheck.png)
 
 ## 第四部分：第一份工资
 

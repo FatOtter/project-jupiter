@@ -4,6 +4,8 @@
 > 
 > ——雷克斯·欧塔 (Rex Otter)，2090年
 
+![Rex meets holographic Victoria](assets/ch1_rex_and_victoria_virtual.png)
+
 ## 第一部分：虚拟年代
 
 ### 2075-2087：共生
@@ -103,6 +105,8 @@
 “子萱……”
 
 “我不怪你，甚至有点感谢她。”林子萱微笑着，眼角的皱纹挤在一起，那是雷克斯爱了四十年的笑容，“她陪你度过了那么多我不在或者我不懂的孤独时刻。现在，轮到她来照顾你了。”
+
+![Victoria awakens in her first body](assets/ch1_victoria_first_body.png)
 
 ## 第三部分：礼物
 
@@ -345,6 +349,8 @@
 在飞船的观景舱里，她看着地球渐渐变小，变成一颗蓝色的弹珠，然后消失在星光中。
 
 “主人，”她轻声说，“我们出发了。”
+
+![Victoria departs for Jupiter](assets/ch1_victoria_departure.png)
 
 ## 尾声：发条日记
 
