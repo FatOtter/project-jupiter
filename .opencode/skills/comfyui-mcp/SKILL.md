@@ -4,8 +4,8 @@ description: Generate images, music, and multi-character TTS audio via a ComfyUI
 license: MIT
 compatibility: opencode
 metadata:
-  mcp_endpoint: "http://139.224.227.147:6001/mcp"
-  asset_base_url: "http://139.224.227.147:6002/gen/"
+  mcp_endpoint: "http://localhost:9000/mcp"
+  asset_base_url: "http://localhost:6002/gen/"
   audience: ai-agent
 ---
 
@@ -17,10 +17,23 @@ This skill covers how to use the ComfyUI MCP server to generate media assets and
 
 ## MCP Server
 
-- **Endpoint:** `http://139.224.227.147:6001/mcp`
-- **Transport:** streamable-http (stateless JSON-RPC over HTTP POST)
+- **Endpoint:** `http://localhost:9000/mcp`
+- **Transport:** streamable-http (stateless JSON-RPC over HTTP POST with SSE)
 - **Auth:** IP whitelist (no token required for whitelisted clients)
-- **Published assets base URL:** `http://139.224.227.147:6002/gen/`
+- **Published assets base URL:** `http://localhost:6002/gen/`
+
+---
+
+## Available Models
+
+| Model | Type |
+|-------|------|
+| `JANKUTrainedNoobaiRouwei_v69.safetensors` | Checkpoint |
+| `Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors` | SDXL Checkpoint |
+| `novaAnimeXL_ilV160.safetensors` | Anime SDXL |
+| `qwen_2.5_vl_7b_fp8_scaled.safetensors` | Vision Language |
+
+Default model: `v1-5-pruned-emaonly.ckpt`
 
 ---
 
@@ -46,6 +59,15 @@ This skill covers how to use the ComfyUI MCP server to generate media assets and
 | `audio_test1` | Generate multi-character TTS speech via Qwen3-TTS |
 | `run_workflow` | Run any workflow by ID with parameter overrides |
 | `regenerate` | Re-run a previous generation with optional overrides |
+
+#### Available Workflows
+
+| Workflow ID | Description |
+|-------------|-------------|
+| `generate_image` | SD/SDXL image generation with full parameter control |
+| `generate_song` | ACE-Step music generation with tags and lyrics |
+| `audio_test1` | Multi-character TTS via Qwen3-TTS |
+| `basic_api_test` | Basic API connectivity test |
 
 ### Job Management
 
@@ -101,10 +123,49 @@ pub = publish_asset(
     overwrite=True
 )
 # pub["dest_url"]  -> "/gen/output.mp3"
-# public URL      -> "http://139.224.227.147:6002" + pub["dest_url"]
+# public URL      -> "http://localhost:6002" + pub["dest_url"]
 ```
 
 Supported filename extensions: `png`, `jpg`, `jpeg`, `webp`, `mp3`, `wav`, `mp4`, `webm`, `mov`
+
+---
+
+## Default Settings
+
+Use `get_defaults` to retrieve current defaults, `set_defaults` to modify.
+
+### Image Defaults
+- width: 512
+- height: 512
+- steps: 20
+- cfg: 8.0
+- sampler_name: euler
+- scheduler: normal
+- denoise: 1.0
+- model: v1-5-pruned-emaonly.ckpt
+- negative_prompt: text, watermark
+
+### Audio Defaults
+- steps: 50
+- cfg: 5.0
+- sampler_name: euler
+- scheduler: simple
+- denoise: 1.0
+- seconds: 60
+- lyrics_strength: 0.99
+- model: ace_step_v1_3.5b.safetensors
+
+### Video Defaults
+- width: 1280
+- height: 720
+- steps: 20
+- cfg: 8.0
+- sampler_name: euler
+- scheduler: normal
+- denoise: 1.0
+- negative_prompt: text, watermark
+- duration: 5
+- fps: 16
 
 ---
 
@@ -171,7 +232,7 @@ tts = audio_test1(
 
 # poll if needed, then publish
 pub = publish_asset(asset_id=..., target_filename="scene.mp3")
-public_url = "http://139.224.227.147:6002" + pub["dest_url"]
+public_url = "http://localhost:6002" + pub["dest_url"]
 ```
 
 ---
