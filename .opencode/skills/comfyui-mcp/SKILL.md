@@ -62,12 +62,13 @@ Default model: `v1-5-pruned-emaonly.ckpt`
 
 #### Available Workflows
 
-| Workflow ID | Description |
-|-------------|-------------|
-| `generate_image` | SD/SDXL image generation with full parameter control |
-| `generate_song` | ACE-Step music generation with tags and lyrics |
-| `audio_test1` | Multi-character TTS via Qwen3-TTS |
-| `basic_api_test` | Basic API connectivity test |
+| Workflow ID | Description | Key Parameters |
+|-------------|-------------|----------------|
+| `generate_image` | SD/SDXL image generation | `prompt`, `width`, `height`, `steps`, `seed` |
+| `generate_song` | Music via ACE-Step v1 (umt5-base encoder, high quality) | `tags`, `lyrics`, `negative`, `seconds`, `steps`, `seed` |
+| `audio_test1` | Multi-character TTS via Qwen3-TTS | `text`, `narrator_voice`, `seed` |
+| `radio_drama_ch3` | Full multi-character radio drama with custom voice design | `text`, `bartender_voice_desc`, `shiva_voice_desc`, `seed` |
+| `basic_api_test` | Basic API connectivity test | — |
 
 ### Job Management
 
@@ -185,54 +186,94 @@ img = generate_image(
 pub = publish_asset(asset_id=img["asset_id"], target_filename="city.png")
 ```
 
-### Music generation
+### Music generation (ACE-Step v1, high quality)
+
+`generate_song` uses ACE-Step v1 with `umt5-base` text encoder — much better style understanding than ACE-Step 1.5.
+
+- `tags`: Music style description in English. Be specific about instruments and mood. Add explicit negatives.
+- `lyrics`: Use `"[instrumental]"` for background music. Include `[verse]`/`[chorus]` tags for songs.
+- `negative`: What to avoid — e.g. `"metal, guitar, distortion, drums"` for ambient.
+- `seconds`: Duration (float). Default 60.
+- `steps`: Quality/time tradeoff. Default 60. Do not go below 30.
+
 ```
-song = generate_song(
-    tags="cinematic orchestral epic",
-    lyrics="[verse]\nRising from the ashes...",
-    seconds=30,
-    seed=1234
+# Ambient BGM — spaceport
+song = run_workflow(
+    workflow_id="generate_song",
+    overrides={
+        "tags": "ambient electronic, sci-fi spaceport, cold sterile drone pads, minimal texture, no melody, no drums",
+        "lyrics": "[instrumental]",
+        "negative": "metal, rock, guitar, distortion, drums, vocals",
+        "seconds": 60,
+        "steps": 60,
+        "seed": 1001
+    }
 )
-# poll get_job if status is "running"
-pub = publish_asset(asset_id=..., target_filename="track.mp3")
+# poll get_job until completed, then copy output file to public/gen/
 ```
 
 ### Multi-character TTS
-Uses Qwen3-TTS with two built-in voice characters, each with language-specific reference voices to minimize foreign accent.
+Uses Qwen3-TTS with character switching via `[Character Tag]` labels in text.
 
-#### Voice file reference
+#### Character tag alias map (built-in)
 
-| Character tag in text | `narrator_voice` value | Language |
-|----------------------|----------------------|----------|
-| `[Victoria]` | `voices_examples/characters/victoria_en.mp3` | English |
-| `[Victoria]` | `voices_examples/characters/victoria_zh.mp3` | Chinese |
-| `[Victoria]` | `voices_examples/characters/victoria_ja.mp3` | Japanese |
-| `[Victoria]` | `voices_examples/characters/victoria.mp3` | Default (Japanese) |
-| `[Yin Shuang]` | `voices_examples/characters/silverfrost_en.mp3` | English |
-| `[Yin Shuang]` | `voices_examples/characters/silverfrost_zh.mp3` | Chinese |
-| `[Yin Shuang]` | `voices_examples/characters/silverfrost_ja.mp3` | Japanese |
-| `[Yin Shuang]` | `voices_examples/characters/silverfrost.mp3` | Default (Chinese) |
+| Tag in text | Voice resolved | Language |
+|-------------|---------------|----------|
+| `[Victoria ZH]` | `victoria_zh` (Chinese, ICL mode) | Chinese |
+| `[Victoria EN]` | `victoria_en` (English, ICL mode) | English |
+| `[Victoria JA]` | `victoria_ja` (Japanese, ICL mode) | Japanese |
+| `[Victoria]` | `victoria` (Japanese default) | Japanese |
+| `[Yin Shuang ZH]` | `silverfrost_zh` | Chinese |
+| `[Yin Shuang EN]` | `silverfrost_en` | English |
+| `[Yin Shuang]` | `silverfrost` (Chinese default) | Chinese |
 
-**Rule:** set `narrator_voice` to the language-specific file that matches the **dominant language** of the script. The alias map also supports language-tagged character names in text: `[Victoria EN]`, `[Victoria ZH]`, `[Victoria JA]`, `[Yin Shuang EN]`, `[Yin Shuang ZH]`, `[Yin Shuang JA]`.
+**Critical rules:**
+- Always use language-suffixed tags (`[Victoria ZH]` not `[Victoria]`) to avoid Japanese accent on Chinese text.
+- `narrator_voice` (untagged text) uses the dropdown path. Use `voices_examples/characters/victoria_zh.mp3` for Chinese narration.
+- Custom voices created by `Qwen3TTSVoiceDesignerNode` are saved to `models/voices/{name}.wav` and can be used as `[name]` tags after `RefreshVoiceCacheNode` runs.
 
 ```
-# English scene — use EN reference voices
+# Chinese scene with language-correct tags
 tts = audio_test1(
-    text="[Victoria] Hello! Welcome to Tharsis Dome.\n[Yin Shuang] Systems nominal. Proceed.",
-    narrator_voice="voices_examples/characters/victoria_en.mp3",
-    seed=42
-)
-
-# Chinese scene — use ZH reference voices
-tts = audio_test1(
-    text="[Victoria] 主人好！[Yin Shuang] 系统正常，随时待命。",
+    text="[Victoria ZH] 主人好！[Yin Shuang ZH] 系统正常，随时待命。",
     narrator_voice="voices_examples/characters/victoria_zh.mp3",
     seed=42
 )
 
-# poll if needed, then publish
-pub = publish_asset(asset_id=..., target_filename="scene.mp3")
-public_url = "http://localhost:6002" + pub["dest_url"]
+# poll if needed, then copy to public/gen/
+```
+
+### Radio drama with custom voice design (radio_drama_ch3 workflow)
+
+Uses `Qwen3TTSVoiceDesignerNode` to synthesize new voices from text descriptions, then multi-character TTS.
+
+**Execution order (critical):**
+```
+Qwen3TTSEngineNode (node 1)
+  ├── VoiceDesignerNode bartender (node 2) ──┐
+  └── VoiceDesignerNode shiva (node 3) ──────┤
+                                              ↓
+                                    RefreshVoiceCacheNode (node 4)
+                                    signal=node2, signal2=node3
+                                              │ signal2 passthrough
+                                              ↓
+                  UnifiedTTSTextNode (node 5) ← TTS_engine=node1, opt_narrator=node4[1]
+```
+
+`opt_narrator=node4[1]` forces node 4 (cache refresh) to complete before TTS starts,
+while `TTS_engine=node1` provides the actual engine. All text lines use `[Victoria ZH]`,
+`[bartender_mars]`, `[shiva_lin]` tags — no untagged narration.
+
+```
+result = run_workflow(
+    workflow_id="radio_drama_ch3",
+    overrides={
+        "bartender_voice_desc": "A gruff male voice, raspy and metallic. Slow, deliberate. Chinese Mandarin.",
+        "shiva_voice_desc": "Energetic woman, late 20s, hoarse from machinery noise. Direct engineer tone. Chinese Mandarin.",
+        "text": "[Victoria ZH] 大小姐。[shiva_lin] 别叫我大小姐，叫我希瓦。[bartender_mars] 要点什么？",
+        "seed": 42
+    }
+)
 ```
 
 ---
@@ -250,7 +291,11 @@ public_url = "http://localhost:6002" + pub["dest_url"]
 
 ## Notes
 
-- Assets are **session-scoped**: they expire when the MCP server restarts. Always `publish_asset` before ending a session if the file needs to persist.
-- `narrator_voice` in `audio_test1` is an **enum**, not a free-form path. Use the exact path string from the table above.
-- Long TTS or image generation jobs can take 30–120 seconds. Always use the polling pattern.
-- The `run_workflow` tool can execute any workflow by its filename stem (e.g. `"audio-test1"`). Use `list_workflows` to discover available ones.
+- Assets are **session-scoped**: they expire when the MCP server restarts. After generation, copy output files directly from `ComfyUI/output/audio/` to `comfyui-mcp-server/public/gen/` for persistence.
+- `narrator_voice` in `audio_test1` is an **enum** (dropdown path). Use the exact path string from the table above.
+- Long TTS jobs take 5–10 minutes for full drama scripts. BGM generation at 60 steps takes 2–3 minutes. Always use the polling pattern.
+- The `run_workflow` tool can execute any workflow by its filename stem. Use `list_workflows` to discover available ones.
+- **Victoria's language**: Always use `[Victoria ZH]` for Chinese, never `[Victoria]` (defaults to Japanese voice). Same for Yin Shuang: `[Yin Shuang ZH]` not `[Yin Shuang]`.
+- **ACE-Step v1 BGM quality**: Use descriptive English prompts with explicit negative prompts. `steps=60` is the minimum for quality output. Lower step counts produce noticeable artifacts.
+- **ComfyUI restart required** after installing new custom node packages. The `ComfyUI_ACE-Step` node requires: `py3langid`, `loguru`, `spacy`, `cutlet`, `num2words`, `hangul-romanize`. Install via `pip3` in the ComfyUI venv.
+- **diffusers 0.36.0 bug**: `torchao_quantizer.py` uses `logger` before it's defined. Fix: move `logger = logging.get_logger(__name__)` to before the module-level `_update_torch_safe_globals()` call.
