@@ -148,19 +148,19 @@
 
 | 类型 | 文件 | 状态 |
 |------|------|------|
-| Character Sheet (主图) | `images/reference/victoria_character_sheet_sd35.png` | ✅ 已生成 (SD3.5, 3484×1340) |
-| 正面图 | `images/reference/victoria_sd35_front.png` | ✅ 已生成 |
-| 背面图 | `images/reference/victoria_sd35_back.png` | ✅ 已生成 |
-| 侧面图 | `images/reference/victoria_sd35_side.png` | ✅ 已生成 |
-| 3/4 视角 | `images/reference/victoria_sd35_three_quarter.png` | ✅ 已生成 |
+| Character Sheet (主图) | `images/reference/victoria_character_sheet_final.png` | ✅ 已生成 (SD3.5, 3444×1312) |
+| 正面图 | `images/reference/victoria_final_front.png` | ✅ 已生成 |
+| 背面图 | `images/reference/victoria_final_back.png` | ✅ 已生成 |
+| 侧面图 | `images/reference/victoria_final_side.png` | ✅ 已生成 |
+| 3/4 视角 | `images/reference/victoria_final_three_quarter.png` | ✅ 已生成 |
 | Pose 图 | `images/poses/` | 待 ControlNet 模型就绪 |
 
-### 生成参数 (SD3.5 T2I)
+### 生成参数 (SD3.5 T2I — 最终版)
 - **模型**: `sd3.5_large_fp8_scaled.safetensors`
-- **采样器**: Euler / simple scheduler / shift=3.0
-- **Steps**: 30, CFG: 4.5
-- **分辨率**: 832×1216
-- **方法**: 纯文生图（不依赖参考图/ControlNet）
+- **采样器**: dpmpp_2m / sgm_uniform / shift=3.0
+- **Steps**: 35, CFG: 3.5
+- **分辨率**: 832×1216, batch=10 per view（人工筛选最优）
+- **方法**: 纯文生图，统一动漫插画风格
 
 ## 广播剧出演记录
 
