@@ -153,7 +153,8 @@
 | 背面图 | `images/reference/victoria_final_back.png` | ✅ 已生成 |
 | 侧面图 | `images/reference/victoria_final_side.png` | ✅ 已生成 |
 | 3/4 视角 | `images/reference/victoria_final_three_quarter.png` | ✅ 已生成 |
-| Pose 图 | `images/poses/` | 待 ControlNet 模型就绪 |
+| 服装变体 | `images/outfits/` | ✅ 6套（赛博朋克/战斗女仆/礼服/夏日/运动/睡衣）|
+| Pose 变体 | `images/poses/` | ✅ 6个（开心/忧郁/警戒/慵懒/端茶/奔跑）|
 
 ### 生成参数 (SD3.5 T2I — 最终版)
 - **模型**: `sd3.5_large_fp8_scaled.safetensors`
