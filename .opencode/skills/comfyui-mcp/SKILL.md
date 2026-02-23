@@ -215,32 +215,58 @@ song = run_workflow(
 ### Multi-character TTS
 Uses Qwen3-TTS with character switching via `[Character Tag]` labels in text.
 
-#### Character tag alias map (built-in)
+#### Character tag alias map (built-in presets)
 
 | Tag in text | Voice resolved | Language |
 |-------------|---------------|----------|
-| `[Victoria ZH]` | `victoria_zh` (Chinese, ICL mode) | Chinese |
-| `[Victoria EN]` | `victoria_en` (English, ICL mode) | English |
-| `[Victoria JA]` | `victoria_ja` (Japanese, ICL mode) | Japanese |
-| `[Victoria]` | `victoria` (Japanese default) | Japanese |
+| `[Yin Shuang]` | `silverfrost` (Chinese default) | Chinese |
 | `[Yin Shuang ZH]` | `silverfrost_zh` | Chinese |
 | `[Yin Shuang EN]` | `silverfrost_en` | English |
-| `[Yin Shuang]` | `silverfrost` (Chinese default) | Chinese |
+
+> **Note:** `Victoria ZH/EN/JA` presets have been removed from `models/voices/` as they were superseded by `victoria_custom`. Use `[victoria_custom]` for Victoria in all new productions.
+
+#### Project Jupiter character tags (VoiceDesign — models/voices/)
+
+| Tag in text | Character | Language | Profile |
+|-------------|-----------|----------|---------|
+| `[victoria_custom]` | 维多利亚 | Chinese | `characters/victoria/` |
+| `[shiva_lin]` | 希瓦·林 | Chinese | `characters/shiva_lin/` |
+| `[bartender_mars]` | 三手调酒师 | Chinese | — |
+| `[augmented_man]` | 飞升者（通用）| Chinese | `characters/_npcs/` |
+| `[staff_voice]` | 地勤职员（通用）| Chinese | `characters/_npcs/` |
+
+#### NPC tags (VoiceDesign — models/voices/)
+
+| Tag in text | NPC | Profile |
+|-------------|-----|---------|
+| `[narrator_zh]` | 旁白（中文成熟女声）| `characters/_npcs/narrator/` |
+| `[passerby_male_young]` | 年轻男路人 | `characters/_npcs/passerby_male_young/` |
+| `[passerby_male_mid]` | 中年男路人 | `characters/_npcs/passerby_male_mid/` |
+| `[passerby_male_old]` | 老年男路人 | `characters/_npcs/passerby_male_old/` |
+| `[passerby_female_young]` | 年轻女路人 | `characters/_npcs/passerby_female_young/` |
+| `[passerby_female_mid]` | 中年女路人 | `characters/_npcs/passerby_female_mid/` |
+| `[passerby_female_old]` | 老年女路人 | `characters/_npcs/passerby_female_old/` |
+| `[official_male]` | 官方播报男声 | `characters/_npcs/official_male/` |
+| `[official_female]` | 官方播报女声 | `characters/_npcs/official_female/` |
 
 **Critical rules:**
-- Always use language-suffixed tags (`[Victoria ZH]` not `[Victoria]`) to avoid Japanese accent on Chinese text.
-- `narrator_voice` (untagged text) uses the dropdown path. Use `voices_examples/characters/victoria_zh.mp3` for Chinese narration.
-- Custom voices created by `Qwen3TTSVoiceDesignerNode` are saved to `models/voices/{name}.wav` and can be used as `[name]` tags after `RefreshVoiceCacheNode` runs.
+- All VoiceDesign tags above resolve to `models/voices/{tag_name}.wav`
+- `narrator_voice` dropdown (for untagged text) should use `voices_examples/characters/silverfrost.mp3`
+- For new characters: use `generate_npc_voice` workflow with `character_name` param to save to `models/voices/`
+- Full radio drama production workflow: see `.opencode/skills/radio-drama/SKILL.md`
 
-```
-# Chinese scene with language-correct tags
-tts = audio_test1(
-    text="[Victoria ZH] 主人好！[Yin Shuang ZH] 系统正常，随时待命。",
-    narrator_voice="voices_examples/characters/victoria_zh.mp3",
-    seed=42
+```python
+# Example: multi-character TTS with Project Jupiter cast
+result = run_workflow(
+    workflow_id="radio_drama_ch3",
+    overrides={
+        "victoria_voice_desc": "年轻女性，声线清亮，气息感，偏中低音域...",
+        "narrator_voice_desc": "中年成熟女性，沉稳低沉，叙事感...",
+        # ... other voice descs
+        "text": "[narrator_zh] 旁白内容。[victoria_custom] 维多利亚的台词。",
+        "seed": 3001
+    }
 )
-
-# poll if needed, then copy to public/gen/
 ```
 
 ### Radio drama with custom voice design (radio_drama_ch3 workflow)
