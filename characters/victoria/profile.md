@@ -146,22 +146,30 @@
 
 ## 图像资产
 
-| 类型 | 文件 | 状态 |
-|------|------|------|
-| Character Sheet (主图) | `images/reference/victoria_character_sheet_final.png` | ✅ 已生成 (SD3.5, 3444×1312) |
-| 正面图 | `images/reference/victoria_final_front.png` | ✅ 已生成 |
-| 背面图 | `images/reference/victoria_final_back.png` | ✅ 已生成 |
-| 侧面图 | `images/reference/victoria_final_side.png` | ✅ 已生成 |
-| 3/4 视角 | `images/reference/victoria_final_three_quarter.png` | ✅ 已生成 |
-| 服装变体 | `images/outfits/` | ✅ 6套（赛博朋克/战斗女仆/礼服/夏日/运动/睡衣）|
-| Pose 变体 | `images/poses/` | ✅ 6个（开心/忧郁/警戒/慵懒/端茶/奔跑）|
+工作流
+generate_anime_portrait.json
 
-### 生成参数 (SD3.5 T2I — 最终版)
-- **模型**: `sd3.5_large_fp8_scaled.safetensors`
-- **采样器**: dpmpp_2m / sgm_uniform / shift=3.0
-- **Steps**: 35, CFG: 3.5
-- **分辨率**: 832×1216, batch=10 per view（人工筛选最优）
-- **方法**: 纯文生图，统一动漫插画风格
+
+模型
+novaOrangeXL_exV10
+
+提示词
+ semi-realism, masterpiece, best quality, very aesthetic, amazing quality, absurdres, newest,
+
+1girl, black long hair, purple eyes, black cat ears, classic maid outfit, short maid dress, gentle smile, overknee stockings
+
+simple background, soft lighting, warm atmosphere,
+
+depth of field, full body shot 
+
+
+负面提示词
+blurry, low quality, bad anatomy, extra ears, human ears visible, extra limbs, bad hands, bad fingers,
+nsfw, explicit, gore, horror, ugly, deformed, disfigured,
+text, watermark, logo, signature,
+ponytail, bun, updo,
+duplicate, clone, same face, identical twins
+
 
 ## 广播剧出演记录
 
